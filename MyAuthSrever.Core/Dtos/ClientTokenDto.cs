@@ -9,6 +9,6 @@ namespace MyAuthSrever.Core.Dtos
     public class ClientTokenDto
     {
         public string AccessToken { get; set; } = null!;
-        public string AccessTokenExpiration { get; set; } = null!;
+        public DateTime AccessTokenExpiration { get; set; }
     }
 }
