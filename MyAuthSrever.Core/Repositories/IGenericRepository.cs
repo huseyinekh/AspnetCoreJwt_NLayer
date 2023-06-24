@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 
 namespace MyAuthServer.Core.Repositories
 {
-    public interface IGenericRepositories<TEntity> where TEntity : class
+    public interface IGenericRepository<TEntity> where TEntity : class
     {
         Task<TEntity> GetByIdAsync(int Id);
-        Task<IQueryable<IEnumerable< TEntity>>> GetAllAsync(int Id);
+        Task<IEnumerable< TEntity>> GetAllAsync();
         Task AddAsync(TEntity entity);
         void Remove(TEntity entity);
         TEntity Update(TEntity entity);
